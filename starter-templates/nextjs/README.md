@@ -1,44 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [Codebuff](https://codebuff.com)!
+# Next.js Template
 
-## Get this project
+A [Next.js](https://nextjs.org) 15 project with React 19, TypeScript, and Tailwind CSS. Uses Turbopack for lightning-fast development.
 
-Run the following to clone this starter template:
+## Get This Template
 
 ```bash
 codebuff --create nextjs my-app
 ```
 
-## Getting Started
-
-To get set up, run the development server:
+## Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server (uses Turbopack)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see your app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Edit the page by modifying `app/page.tsx` — the page auto-updates as you save.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server with Turbopack |
+| `npm run build` | Build for production |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+| `npm run checks` | Run TypeScript + ESLint |
+
+## Project Structure
+
+```
+my-app/
+├── app/
+│   ├── globals.css     # Global Tailwind styles
+│   ├── layout.tsx      # Root layout
+│   └── page.tsx        # Home page
+├── public/             # Static assets
+├── package.json
+├── next.config.ts      # Next.js configuration
+├── tailwind.config.ts  # Tailwind CSS config
+├── postcss.config.mjs  # PostCSS config
+└── tsconfig.json       # TypeScript config
+```
+
+## Technology Stack
+
+- **Next.js 15** — React framework with App Router
+- **React 19** — UI library
+- **TypeScript** — Type safety
+- **Tailwind CSS** — Utility-first CSS
+- **Turbopack** — Next.js 15's Rust-based bundler
+
+## Code Quality
+
+This template enforces:
+- TypeScript strict mode
+- Next.js ESLint configuration
+- Tailwind CSS best practices
+
+Run all checks before committing:
+
+```bash
+npm run checks
+```
+
+This runs `tsc --noEmit` and `npm run lint`.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js Documentation](https://nextjs.org/docs) — Features and API
+- [Learn Next.js](https://nextjs.org/learn) — Interactive tutorial
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [Codebuff Docs](https://www.codebuff.com/docs)
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy is using the [Vercel Platform](https://vercel.com/new):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to GitHub
+2. Import the project in Vercel
+3. Deploy with zero configuration
+
+See [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying) for more options.
